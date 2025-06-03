@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="description" content="Random Coffee Pics" />
+  <meta name="description" content="Random Jokes" />
   <meta name="keywords" content="mths, ics2o" />
-  <meta name="author" content="Mr. Coxall" />
+  <meta name="author" content="Shanea Jaromay" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./css/style.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
@@ -14,7 +14,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
   <link rel="manifest" href="site.webmanifest" />
-  <title>Random Coffee Pics</title>
+  <title>Random Jokes</title>
 </head>
 
 <body>
@@ -23,26 +23,19 @@
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">Random Coffee Pics</span>
+        <span class="mdl-layout-title">Random Jokes</span>
       </div>
     </header>
     <main class="mdl-layout__content">
-      <div class="right-image">
-        <img id="coffee" src="./images/matcha.jpeg" alt="coffee" width="95%" height="auto">
-      </div>
-      <div class="page-content">Coffee Pictures</div>
+      <div class="page-content">Get a joke, to make you laugh</div>
       <br />
-      <!-- Simple Textfield for integers-->
-      <form action="#">
-        <!-- Accent-colored raised button with ripple -->
         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          onclick="getCoffee()">
-          COFFEE
+          onclick="getJoke()">
+          JOKE
         </button>
-      </form>
       <br />
       <div class="page-content-answer">
-        <div id="coffee-pics"></div>
+        <div id="jokes"></div>
       </div>
   </div>
   </main>

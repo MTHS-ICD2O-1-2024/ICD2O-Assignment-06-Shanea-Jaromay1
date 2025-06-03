@@ -10,18 +10,24 @@
  * This function gets the weather today.
  * The "async" is there because it will take time for the internet to return the value
  */
-async function getCoffee() {
+async function getJoke() {
   // the "try" is here because the internet may not be working
   // it is like an "if ... else" statement"
   try {
-    const resultJSON = await fetch("https://coffee.alexflipnote.dev/random.json")
+    const resultJSON = await fetch("https://official-joke-api.appspot.com/random_joke")
     const jsonData = await resultJSON.json()
     console.log(jsonData)
-    const imageSrc = jsonData.random.json[0].imageSrc
+
+    const setup = jsonData.setup
+    const punchline = jsonData.punchline
 
     // output
-    document.getElementById("coffee-pics").innerHTML = tempCelsius.toFixed(1) + " °C"
+    document.getElementById("jokes").innerHTML =
+    "Joke: " + setup + "<br>" + 
+    "Punchline: " + punchline + "<br>" + 
+    "HAHAHAHA"
   } catch (error) {
-    console.error(error)
+    console.error("Error getting jokes:", error)
+    document.getElementById("jokes").innerHTML = "Sorry, something went wrong!"
   }
 }
